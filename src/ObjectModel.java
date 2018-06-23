@@ -1,2 +1,2 @@
-public class ObjectModel {
+class ObjectModel {
 }

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -28,13 +33,44 @@
       </MenuBar>
    </top>
    <bottom>
-      <AnchorPane prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="27.0" prefWidth="500.0" style="-fx-background-color: #E8E7E7#E8E7E7;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Output:">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
    </bottom>
    <center>
-      <Slider BorderPane.alignment="CENTER">
-         <padding>
-            <Insets left="100.0" right="100.0" />
-         </padding>
-      </Slider>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Nameable" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="30.0" top="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Slider showTickMarks="true" snapToTicks="true" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="100.0" />
+                     </HBox.margin>
+                  </Slider>
+                  <Label text="Similar" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="50.0" top="100.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button" StackPane.alignment="TOP_CENTER" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
    </center>
 </BorderPane>

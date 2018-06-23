@@ -11,6 +11,9 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("object.fxml"));
         primaryStage.setTitle("Object Project WIP");
 
+        ObjectController objectController = new ObjectController();
+        ObjectModel objectModel = new ObjectModel();
+        objectController.initModel(objectModel);
 
         primaryStage.setScene(new Scene(root, root.prefWidth(-1), root.prefHeight(-1)));
         primaryStage.setMinWidth(root.minWidth(-1));
